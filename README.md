@@ -58,33 +58,32 @@ Certifique-se de ter instalado:
 
 ### 💻 Passos para rodar o projeto localmente:
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
-
-2 - **Instale as dependências do projeto:**
-  npm install
-
-
-3 - **Configure o banco de dados MySQL:**
-  Crie o banco de dados chamado sistemafuncionarios
-  Execute o script Banco.sql que está na raiz do projeto para criar as tabelas e inserir dados iniciais.
-
-
-4 - **Inicie o servidor:**
-  node app.js
-
-
-5 - **Testar a API com o Insomnia/Postman:**
-
-  Faça requisições para http://localhost:3000/ (ou porta configurada)
-  Verifique rotas como:
-  POST /login
-  GET /funcionarios
-  POST /funcionarios
-  GET /departamentos
-  GET /historicoCargo/:idFuncionario
+   1. **Clone o repositório:**
+      ```bash
+      git clone https://github.com/seu-usuario/seu-repositorio.git
+      cd seu-repositorio
+   
+   2 - **Instale as dependências do projeto:**
+     npm install
+   
+   
+   3 - **Configure o banco de dados MySQL:**
+     Crie o banco de dados chamado sistemafuncionarios
+     Execute o script Banco.sql que está na raiz do projeto para criar as tabelas e inserir dados iniciais.
+   
+   
+   4 - **Inicie o servidor:**
+     node app.js
+   
+   
+   5 - **Testar a API com o Insomnia/Postman:**
+      Faça requisições para http://localhost:3000/ (ou porta configurada)
+      Verifique rotas como:
+      POST /login
+      GET /funcionarios
+      POST /funcionarios
+      GET /departamentos
+      GET /historicoCargo/:idFuncionario
 
 
 ## 👨‍💻 Desenvolvido por
