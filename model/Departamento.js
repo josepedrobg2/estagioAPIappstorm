@@ -86,6 +86,7 @@ class Departamento {
         }
     }
     async isDepartamentoByNomeDepartamento() {
+        const conexao = Banco.getConexao();
         const sql = `SELECT * FROM departamentos WHERE nomeDepartamento = ?`;
         const valores = [this.nomeDepartamento];
         try{
