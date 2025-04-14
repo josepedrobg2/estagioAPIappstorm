@@ -1,4 +1,4 @@
-#Sistema de Gestão de Funcionários
+## Sistema de Gestão de Funcionários
 
 ## 📌 Descrição
 
