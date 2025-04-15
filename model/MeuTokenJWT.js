@@ -42,7 +42,7 @@ class MeuTokenJWT {
         }
         const token = stringToken.replace("Bearer ", "").trim();
         try {
-            const decoded = jwt.verify(token, this._key, { algorithms: [this._alg] });
+            const decoded = jwt.verify(token, this._key, { algorithms: [this._alg] }); // valida e decdifica o token
             this.payload = decoded;
             return true;
         } catch (err) {

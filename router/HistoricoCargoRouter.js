@@ -18,7 +18,7 @@ module.exports = class HistoricoCargoRouter {
             this._historicoCargoControl.readAll
         );
 
-        this.router.get('/:idDepartamento',
+        this.router.get('/:idHistoricoCargos',
             this.jwtMiddleware.validate,
             this._historicoCargoControl.readByID
         );
@@ -30,12 +30,12 @@ module.exports = class HistoricoCargoRouter {
             this._historicoCargoControl.create
         );
 
-        this.router.delete('/:idDepartamento',
+        this.router.delete('/:idHistoricoCargos',
             this.jwtMiddleware.validate,
             this._historicoCargoControl.delete
         );
 
-        this.router.put('/:idDepartamento',
+        this.router.put('/:idHistoricoCargos',
             this.jwtMiddleware.validate,
             this._historicoCargoControl.update
         );

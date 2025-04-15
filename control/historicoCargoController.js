@@ -33,7 +33,7 @@ module.exports = class HistoricoCargoController {
         const historico = new HistoricoCargo();
 
         // Define o ID do histórico a ser atualizado
-        historico.idHistoricoCargo = request.params.id;
+        historico.idHistoricoCargos = request.params.id;
 
         // Define os novos valores do histórico de cargo com base no corpo da requisição
         historico.idFuncionario = request.body.HistoricoCargo.idFuncionario;
@@ -59,7 +59,7 @@ module.exports = class HistoricoCargoController {
         const historico = new HistoricoCargo();
 
         // Define o ID do registro a ser excluído com base nos parâmetros
-        historico.idHistoricoCargo = request.params.id;
+        historico.idHistoricoCargos = request.params.id;
 
         // Chama o método delete() do modelo
         const isDeleted = await historico.delete();
@@ -95,7 +95,7 @@ module.exports = class HistoricoCargoController {
         const historico = new HistoricoCargo();
 
         // Define o ID com base nos parâmetros
-        historico.idHistoricoCargo = request.params.id;
+        historico.idHistoricoCargos = request.params.id;
 
         // Busca o registro específico
         const resultado = await historico.readByID();
