@@ -99,6 +99,29 @@ class HistoricoCargo {
             return [];
         }
     }
+    // Verifica se já existe um histórico com os mesmos dados
+    async isHistoricoExistente() {
+        const conexao = Banco.getConexao();
+        const SQL = `
+            SELECT * FROM historicocargos
+            WHERE idFuncionarioCargos = ? 
+            AND novoCargo = ? 
+            AND dataAlteracao = ?;
+        `;
+
+        try {
+            const [rows] = await conexao.promise().execute(SQL, [
+                this._idFuncionarioCargos,
+                this._novoCargo,
+                this._dataAlteracao
+            ]);
+
+            return rows.length > 0; // Retorna true se existir
+        } catch (error) {
+            console.error("Erro ao verificar histórico existente:", error);
+            return false;
+        }
+    }
 
     // Getters e Setters
     get idHistoricoCargos() {

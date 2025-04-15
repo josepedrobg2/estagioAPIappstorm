@@ -94,6 +94,19 @@ class Perfil {
             return null;
         }
     }
+    // Verifica se existe um perfil com o ID fornecido
+    async isPerfilById(idPerfil) {
+        const conexao = Banco.getConexao();
+        const SQL = 'SELECT * FROM perfis WHERE idPerfil = ? LIMIT 1;';
+
+        try {
+            const [rows] = await conexao.promise().execute(SQL, [idPerfil]);
+            return rows.length > 0;
+        } catch (error) {
+            console.error('Erro ao verificar perfil por ID:', error);
+            return false;
+        }
+    }
 
     get idPerfil() {
         return this._idPerfil;

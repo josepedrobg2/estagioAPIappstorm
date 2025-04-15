@@ -17,25 +17,7 @@ module.exports = class PerfilMiddleware {
 
         next();
     }
-
-    // Verifica se já existe um perfil com o mesmo nome
-    async isNot_PerfilByNomePerfil(request, response, next) {
-        const nomePerfil = request.body.perfil.nomePerfil;
-
-        const objPerfil = new Perfil();
-        objPerfil.nomePerfil = nomePerfil;
-
-        const perfilExiste = await objPerfil.isPerfilByNomePerfil();
-
-        if (perfilExiste) {
-            return response.status(400).send({
-                status: false,
-                msg: "Já existe um perfil com este nome."
-            });
-        }
-
-        next();
-    }
+    
 
     // Verifica se o ID do perfil existe no banco (para update/delete)
     async isPerfilById(request, response, next) {
