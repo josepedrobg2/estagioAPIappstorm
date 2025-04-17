@@ -24,7 +24,6 @@ module.exports = class HistoricoCargoRouter {
         );
 
         this.router.post('/',
-            this.jwtMiddleware.validate,
             this._historicoCargoMiddleware.validar_IDs,
             this._historicoCargoMiddleware.isNot_HistoricoCargoDuplicado,
             this._historicoCargoControl.create

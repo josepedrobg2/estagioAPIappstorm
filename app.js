@@ -8,7 +8,7 @@ const LoginRouter = require('./router/LoginRouter');
 
 const app = express();
 
-const portaServico = 80;
+const portaServico = 3000;
 
 app.use(express.json());
 

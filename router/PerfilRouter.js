@@ -24,13 +24,11 @@ module.exports = class PerfilRouter {
         );
 
         this.router.post('/',
-            this.jwtMiddleware.validate,
-            this.perfilMiddleware.isPerfilById,
-            this.perfilMiddleware.isNot_PerfilByNomePerfil,
+            this.perfilMiddleware.isPerfilById, // Se ainda quiser validar ID
             this.perfilMiddleware.validar_NomePerfil,
             this.perfilControl.create
         );
-
+        
         this.router.delete('/:idPerfil',
             this.jwtMiddleware.validate,
             this.perfilControl.delete
